@@ -1,0 +1,24 @@
+# Created on: Oct 29, 2012
+#     Author: jorge
+# Configuration for subscribers to multiple cmd_vel sources.
+#
+# Individual subscriber configuration:
+#   name:           Source name
+#   topic:          The topic that provides cmd_vel messages
+#   timeout:        Time in seconds without incoming messages to consider this topic inactive
+#   priority:       Priority: an UNIQUE unsigned integer from 0 (lowest) to MAX_INT 
+#   short_desc:     Short description (optional)
+
+subscribers:
+  - name:        "simple keyboard controller"
+    topic:       "input/simple_key"
+    timeout:     1.0
+    priority:    7
+  - name:        "keyboard controller"
+    topic:       "input/key"
+    timeout:     1.0
+    priority:    6
+  - name:        "Navigation"
+    topic:       "input/navi"
+    timeout:     1.0
+    priority:    7

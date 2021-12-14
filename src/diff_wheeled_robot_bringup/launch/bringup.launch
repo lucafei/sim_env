@@ -1,0 +1,16 @@
+<launch>
+
+  <param name="use_sim_time" value="false" />
+
+    <!-- 1. 基于nodelet的底盘通信、速度集成器、速度平滑器 -->
+    <include file="$(find diff_wheeled_robot_bringup)/launch/include/nodelet_manager.launch.xml"/>
+    <include file="$(find diff_wheeled_robot_bringup)/launch/include/velocity_mux_smoother.launch.xml"/> 
+    
+    <!-- 2. 机器人各个部分相对位置描述-->
+    <include file="$(find diff_wheeled_robot_bringup)/launch/include/diff_wheeled_with_laser_gazebo.launch.xml"/>
+    
+    <!-- 3. 启动键盘控制-->
+    <include file="$(find diff_wheeled_robot_bringup)/launch/include/keyboard_teleop.launch.xml"/>
+
+
+</launch>

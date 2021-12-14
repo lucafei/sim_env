@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/mbf_msgs_generate_messages_py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_GetPathResult.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_ExePathGoal.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_MoveBaseActionGoal.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_MoveBaseFeedback.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_RecoveryActionGoal.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_ExePathActionResult.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_GetPathActionFeedback.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_ExePathFeedback.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_ExePathResult.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_RecoveryFeedback.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_MoveBaseActionFeedback.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_GetPathActionGoal.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_ExePathActionFeedback.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_RecoveryAction.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_MoveBaseGoal.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_MoveBaseAction.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_RecoveryGoal.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_ExePathActionGoal.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_RecoveryActionResult.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_GetPathAction.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_MoveBaseResult.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_RecoveryResult.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_GetPathGoal.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_MoveBaseActionResult.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_GetPathActionResult.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_RecoveryActionFeedback.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_ExePathAction.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/_GetPathFeedback.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/srv/_CheckPoint.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/srv/_CheckPath.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/srv/_CheckPose.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/msg/__init__.py"
+  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/mbf_msgs/srv/__init__.py"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/mbf_msgs_generate_messages_py.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

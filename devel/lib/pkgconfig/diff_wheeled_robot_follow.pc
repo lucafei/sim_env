@@ -1,0 +1,8 @@
+prefix=/home/fyin/sim_env/devel
+
+Name: diff_wheeled_robot_follow
+Description: Description of diff_wheeled_robot_follow
+Version: 0.0.0
+Cflags: -I/home/fyin/sim_env/src/diff_wheeled_robot_follow/include
+Libs: -L${prefix}/lib 
+Requires: 

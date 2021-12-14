@@ -1,0 +1,25 @@
+<launch>
+  <!-- 1. 启动底层硬件 -->
+  <include file="$(find diff_wheeled_robot_bringup)/launch/bringup.launch"/>
+
+  <!-- 2. 加载地图[需要修改map.yaml中的地址] -->
+  <arg name="map_file" default="$(find diff_wheeled_robot_navigation)/maps/map.yaml"/>
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- 3. 定位[需要修改pbstream名称] -->
+  <include file="$(find diff_wheeled_robot_navigation)/launch/include/amcl.launch.xml"/>
+
+  <!-- 4. 导航 -->
+  <include file="$(find diff_wheeled_robot_navigation)/launch/include/move_base.launch.xml"/>
+
+  <!-- 5. rviz显示 -->
+  <node name="rviz" pkg="rviz" type="rviz" required="true"
+      args="-d $(find diff_wheeled_robot_navigation)/rviz/navigation.rviz" />
+
+  <!--6. 转换pointclouds到laserscan-->
+  <include file="$(find diff_wheeled_robot_navigation)/launch/include/sample_node.launch.xml"/>
+  
+  <!--7 虚拟定位 发布静态tf odom到map-->
+  <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 /map /odom 100" />
+
+</launch>

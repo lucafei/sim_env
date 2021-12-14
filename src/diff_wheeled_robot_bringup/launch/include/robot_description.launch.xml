@@ -1,0 +1,13 @@
+<!--
+  启动机器人的描述文件解析节点和状态发布节点
+ -->
+<launch>
+
+  <arg name="urdf_file" default="$(find xacro)/xacro --inorder '$(find thunder_description)/urdf/thunder_with_laser.d01.urdf.xacro'"/>
+  <param name="robot_description" command="$(arg urdf_file)"/>
+  
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="5.0" />
+  </node>
+
+</launch>

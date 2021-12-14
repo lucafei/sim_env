@@ -1,0 +1,9 @@
+<launch>
+<node pkg="diff_wheeled_robot_follow" type="path_follow_node" name="path_follow_node">
+<param name="path_points_file" value="./path_interpolation" type="string"/>
+</node>
+<node pkg="diff_wheeled_robot_follow" type="vis_path_node" name="vis_path_node">
+<param name="marker_type" value="SPHERE" type="string"/>
+<param name="marker_color" value="green" type="string"/>
+</node>
+</launch>

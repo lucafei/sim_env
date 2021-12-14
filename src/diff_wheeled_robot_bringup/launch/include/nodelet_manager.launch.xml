@@ -1,0 +1,9 @@
+<!--
+  启动底盘nodelet manager中心节点
+ -->
+<launch>
+    <!-- nodelet manager -->
+    <arg name="manager" default="mobile_base_nodelet_manager" />
+    <node pkg="nodelet" type="nodelet" name="$(arg manager)" args="manager" output="screen"/>
+
+</launch>

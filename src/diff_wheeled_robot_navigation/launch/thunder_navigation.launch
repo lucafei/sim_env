@@ -1,0 +1,19 @@
+<launch>
+  <!-- 1. 启动底层硬件 -->
+  <include file="$(find thunder_bringup)/launch/thunder_minimal.launch"/>
+
+  <!-- 2. 加载地图[需要修改map.yaml中的地址] -->
+  <arg name="map_file" default="/home/cnty/ws_thunder_ros2/src/thunder_ros2/modules/thunder_navigation/maps/map.pbstream.yaml"/>
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- 3. 定位[需要修改pbstream名称] -->
+  <include file="$(find thunder_navigation)/launch/include/thunder_localization_2d_gps.launch.xml"/>
+
+  <!-- 4. 导航 -->
+  <include file="$(find thunder_navigation)/launch/include/thunder_move_base.launch.xml"/>
+
+  <!-- 5. rviz显示 -->
+  <node name="rviz" pkg="rviz" type="rviz" required="true"
+      args="-d $(find thunder_navigation)/rviz/thunder_navigation.rviz" />
+
+</launch>

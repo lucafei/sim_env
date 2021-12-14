@@ -1,0 +1,8 @@
+prefix=/home/fyin/sim_env/install
+
+Name: diff_wheeled_robot_navigation
+Description: Description of diff_wheeled_robot_navigation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

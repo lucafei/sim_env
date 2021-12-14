@@ -1,0 +1,60 @@
+include "map.inc"
+
+resolution 0.02
+interval_sim 20
+
+window
+(
+
+	size[800.000 800.000]
+	scale 25
+	center [0.0 0.0]
+	rotate [0.0 0.0]
+	show_data 1
+)
+
+
+floorplan
+(
+	name "ropmba-stage"
+	bitmap "bitmaps/roomba-stage.png"
+	size [20.0 15.0 1.0]
+	pose [ 0.0 0.0 0.0 0.0]
+)
+
+define laser ranger
+(
+	color "blue"
+	size [0.156 0.155 0.19]
+	sensor
+	(
+		range[0.0 8.0]
+		fov 360.0
+		samples 360
+	)
+)
+
+define robot position
+(
+	size [0.33 0.33 0.2]
+	localization "odom"
+	localization_origin [0.0 0.0 0.0 0.0]
+
+	odom_error [0.0 0.0 0.0 0.0]
+	color "gray50"
+	origin [0.0 0.0 0.0 0.0]
+	
+	drive "diff"
+	gui_nose 1
+	laser
+	(
+		pose[0.0 0.0 0.5 0.0]
+		ctrl "lasernoise"
+		alwayson 1
+	)
+)
+robot
+(
+	name "roomba"
+	pose [-8.0 6.0 0.0 0.0]
+)

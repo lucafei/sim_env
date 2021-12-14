@@ -1,0 +1,8 @@
+prefix=/home/fyin/sim_env/devel
+
+Name: stage_controllers
+Description: Description of stage_controllers
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

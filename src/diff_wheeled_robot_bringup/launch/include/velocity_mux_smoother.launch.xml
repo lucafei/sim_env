@@ -1,0 +1,20 @@
+<!--
+  启动速度集成器和速度平滑器 
+ -->
+<launch>
+    <arg name="manager" default="mobile_base_nodelet_manager" />
+    <!-- velocity commands multiplexer -->
+    <node pkg="nodelet" type="nodelet" name="cmd_vel_mux_nodelet" args="load yocs_cmd_vel_mux/CmdVelMuxNodelet $(arg manager)">
+        <param name="yaml_cfg_file" value="$(find diff_wheeled_robot_bringup)/param/mux.yaml"/>
+        <!--<remap from="~/output" to="mobile_base/commands/velocity"/>--> <!--connect directly to driver node-->
+        <remap from="~/output" to="velocity_smoother_nodelet/raw_cmd_vel"/> <!--connect to velocity_smoother first-->
+    </node>
+
+    <!-- Velocity smoother -->
+    <node pkg="nodelet" type="nodelet" name="velocity_smoother_nodelet" args="load yocs_velocity_smoother/VelocitySmootherNodelet $(arg manager)">
+        <rosparam file="$(find diff_wheeled_robot_bringup)/param/smoother.yaml" command="load"/> 
+        <remap from="~/smooth_cmd_vel" to="/cmd_vel"/> <!--平滑后的速度，直接作为下位机节点的输入-->
+        <remap from="~/odometry" to="odom"/> <!--和真实的里程计数据比较，防止速度阶跃-->
+        <remap from="~/robot_cmd_vel" to="/cmd_vel"/> <!--当没有真实里程计数据时，用光滑后输出的速度作为真实速度，防止速度阶跃-->
+    </node>
+</launch>

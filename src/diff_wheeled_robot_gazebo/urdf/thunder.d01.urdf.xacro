@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<robot name="thunder" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find diff_wheeled_robot_gazebo)/urdf/common_properties.urdf.xacro"/>
+
+  <!-- Thunder -->
+  <xacro:macro name="thunder">
+    <link name="base_footprint"/>
+
+
+    <xacro:property name="body_from_ground" value="0.06" />
+    <xacro:property name="body_high" value="1.3" />
+
+    <joint name="base_joint" type="fixed">
+      <origin xyz="0 0 ${body_from_ground}" rpy="0 0 0" />  
+      <parent link="base_footprint"/>
+      <child link="base_link" />
+    </joint>
+    <link name="base_link">
+      <visual>
+        <geometry>
+          <box size="2.02 1.7 ${body_high}"/>
+        </geometry>
+        <origin xyz="0 0 ${body_high/2}" rpy="0 0 0"/>
+      </visual>
+    </link>
+
+    <xacro:property name="wheel_radius" value="0.2535" />
+    <xacro:macro name="wheel" params="prefix reflect">
+      <link name="wheel_${prefix}_link">
+        <visual>
+          <geometry>
+            <cylinder length="0.145" radius="${wheel_radius}"/>
+          </geometry>
+        </visual>
+      </link>
+      <joint name="wheel_${prefix}_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="wheel_${prefix}_link"/>
+        <origin xyz="0.00 ${reflect*(1.1/2)} ${wheel_radius-body_from_ground}" rpy="${-M_PI/2} 0 0"/>
+        <axis xyz="0 0 1"/>
+      </joint>
+    </xacro:macro>
+
+    <xacro:wheel prefix="left" reflect="1"/>
+    <xacro:wheel prefix="right" reflect="-1"/>
+
+  </xacro:macro>
+
+  
+</robot>
