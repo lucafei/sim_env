@@ -12,5 +12,8 @@
     <!-- 3. 启动键盘控制-->
     <include file="$(find diff_wheeled_robot_bringup)/launch/include/keyboard_teleop.launch.xml"/>
 
+    <!-- 4. 启动节点用于将pointcloud转换成laserscan-->
+    <include file="$(find diff_wheeled_robot_bringup)/launch/include/sample_node.launch.xml"/>
+
 
 </launch>

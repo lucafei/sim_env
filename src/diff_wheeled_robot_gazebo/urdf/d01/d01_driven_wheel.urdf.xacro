@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="driven_wheel">
+    <xacro:macro name="driven_wheel" params="">
+        
+    </xacro:macro>
+</robot>

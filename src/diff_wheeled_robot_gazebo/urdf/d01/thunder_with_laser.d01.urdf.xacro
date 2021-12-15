@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot name="thunder_standalone" xmlns:xacro="http://ros.org/wiki/xacro">
+  
+    <xacro:include filename="$(find diff_wheeled_robot_gazebo)/urdf/thunder.d01.urdf.xacro"/>
+    <xacro:thunder/>
+</robot>

@@ -15,11 +15,8 @@
   <!-- 5. rviz显示 -->
   <node name="rviz" pkg="rviz" type="rviz" required="true"
       args="-d $(find diff_wheeled_robot_navigation)/rviz/navigation.rviz" />
-
-  <!--6. 转换pointclouds到laserscan-->
-  <include file="$(find diff_wheeled_robot_navigation)/launch/include/sample_node.launch.xml"/>
   
-  <!--7 虚拟定位 发布静态tf odom到map-->
+  <!--6 虚拟定位 发布静态tf odom到map-->
   <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 /map /odom 100" />
 
 </launch>
