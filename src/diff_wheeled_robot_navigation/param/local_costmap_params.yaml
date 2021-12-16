@@ -12,4 +12,9 @@ local_costmap:
   
   plugins:
    - {name: static_layer,        type: "costmap_2d::StaticLayer"}
-  #  - {name: obstacle_layer,      type: "costmap_2d::ObstacleLayer"}
+   - {name: obstacle_layer,      type: "costmap_2d::ObstacleLayer"}
+  obstacle_layer:
+    observation_sources: scan  
+    scan: {data_type: LaserScan, topic: /scan, marking: true, clearing: true, expected_update_rate: 0} 
+  inflation_layer: 
+    inflation_radius: 0.35

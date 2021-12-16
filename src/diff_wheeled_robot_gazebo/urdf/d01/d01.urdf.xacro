@@ -121,11 +121,12 @@
         </xacro:action_wheel>
         <xacro:action_wheel parent="base_link" name="rightfront" radius="0.7" length="0.3" flipY="-1" translateX="0.8" translateY="0.9">
         </xacro:action_wheel>
+        <!-->
         <xacro:action_wheel parent="base_link" name="leftback" radius="0.7" length="0.3" flipY="-1" translateX="-0.8" translateY="-0.9">
         </xacro:action_wheel>
         <xacro:action_wheel parent="base_link" name="rightback" radius="0.7" length="0.3" flipY="-1" translateX="-0.8" translateY="0.9">
         </xacro:action_wheel>
-
+<-->
         <gazebo>
             <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
                 <rosDebugLevel>Debug</rosDebugLevel>
@@ -150,9 +151,9 @@
         </gazebo>
 
 
-<xacro:property name="laser_plattform_width" value="0.12"/>
-<xacro:property name="laser_plattform_length" value="0.12"/>
-<xacro:property name="laser_plattform_height" value="0.6"/>
+        <xacro:property name="laser_plattform_width" value="0.12"/>
+        <xacro:property name="laser_plattform_length" value="0.12"/>
+        <xacro:property name="laser_plattform_height" value="0.6"/>
         <link name="laser_plattform_link">
             <visual>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -188,6 +189,29 @@
             <origin xyz="0 0 ${laser_plattform_height/2}" rpy="0 0 0" />
         </xacro:VLP-16>
 
+
+        <xacro:include filename="$(find diff_wheeled_robot_gazebo)/urdf/d01/d01_driven_wheel.urdf.xacro"/>
+        <!--
+        <xacro:castor_mount parent="base_link" name="left"  base_x_origin_to_castor_mount_origin="1.01" base_y_origin_to_castor_mount_origin="0.85" base_z_origin_to_castor_mount_origin="-0.65" translateX="-1" translateY="1">
+        </xacro:castor_mount>
+        <xacro:castor_mount parent="base_link" name="right"  base_x_origin_to_castor_mount_origin="1.01" base_y_origin_to_castor_mount_origin="0.85" base_z_origin_to_castor_mount_origin="-0.65" translateX="-1" translateY="-1">
+        </xacro:castor_mount>
+    
+        <xacro:castor_dummy  parent="left_castor_mount_link" name="left">
+        </xacro:castor_dummy>
+        <xacro:castor_dummy  parent="right_castor_mount_link" name="right">
+        </xacro:castor_dummy>
+        <xacro:driven_wheel parent="left_castor_mount_link" name="left" radius="0.25" length="0.2">
+        </xacro:driven_wheel>
+          <xacro:driven_wheel parent="right_castor_mount_link" name="right" radius="0.25" length="0.2">
+        </xacro:driven_wheel>
+    -->
+    <xacro:driven_wheel_sphere parent="base_link" name="left" radius="0.6" base_x_origin_to_wheel_origin="1.01" base_y_origin_to_wheel_origin="0" base_z_origin_to_wheel_origin="-0.6" translateX="-1" translateY="-1">
+    </xacro:driven_wheel_sphere>
+    <!--
+    <xacro:driven_wheel_sphere parent="base_link" name="right" radius="0.6" base_x_origin_to_wheel_origin="1.01" base_y_origin_to_wheel_origin="0.85" base_z_origin_to_wheel_origin="-0.6" translateX="-1" translateY="1">
+    </xacro:driven_wheel_sphere>
+    -->
     </robot>
 
 

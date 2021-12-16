@@ -3340,82 +3340,17 @@ roslint_pointcloud_to_laserscan/fast:
 .PHONY : roslint_pointcloud_to_laserscan/fast
 
 #=============================================================================
-# Target rules for targets named waypoints_follow_node
+# Target rules for targets named path_follow_node
 
 # Build rule for target.
-waypoints_follow_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 waypoints_follow_node
-.PHONY : waypoints_follow_node
+path_follow_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 path_follow_node
+.PHONY : path_follow_node
 
 # fast build rule for target.
-waypoints_follow_node/fast:
-	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/build
-.PHONY : waypoints_follow_node/fast
-
-#=============================================================================
-# Target rules for targets named visualization_msgs_generate_messages_eus
-
-# Build rule for target.
-visualization_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_eus
-.PHONY : visualization_msgs_generate_messages_eus
-
-# fast build rule for target.
-visualization_msgs_generate_messages_eus/fast:
-	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
-.PHONY : visualization_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named visualization_msgs_generate_messages_cpp
-
-# Build rule for target.
-visualization_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_cpp
-.PHONY : visualization_msgs_generate_messages_cpp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
-.PHONY : visualization_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named vis_path_node
-
-# Build rule for target.
-vis_path_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 vis_path_node
-.PHONY : vis_path_node
-
-# fast build rule for target.
-vis_path_node/fast:
-	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/build
-.PHONY : vis_path_node/fast
-
-#=============================================================================
-# Target rules for targets named visualization_msgs_generate_messages_lisp
-
-# Build rule for target.
-visualization_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_lisp
-.PHONY : visualization_msgs_generate_messages_lisp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
-.PHONY : visualization_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named visualization_msgs_generate_messages_py
-
-# Build rule for target.
-visualization_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_py
-.PHONY : visualization_msgs_generate_messages_py
-
-# fast build rule for target.
-visualization_msgs_generate_messages_py/fast:
-	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
-.PHONY : visualization_msgs_generate_messages_py/fast
+path_follow_node/fast:
+	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/build
+.PHONY : path_follow_node/fast
 
 #=============================================================================
 # Target rules for targets named visualization_msgs_generate_messages_nodejs
@@ -3431,17 +3366,108 @@ visualization_msgs_generate_messages_nodejs/fast:
 .PHONY : visualization_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named path_follow_node
+# Target rules for targets named visualization_msgs_generate_messages_py
 
 # Build rule for target.
-path_follow_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 path_follow_node
-.PHONY : path_follow_node
+visualization_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_py
+.PHONY : visualization_msgs_generate_messages_py
 
 # fast build rule for target.
-path_follow_node/fast:
-	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/build
-.PHONY : path_follow_node/fast
+visualization_msgs_generate_messages_py/fast:
+	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
+.PHONY : visualization_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named vis_path_node
+
+# Build rule for target.
+vis_path_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vis_path_node
+.PHONY : vis_path_node
+
+# fast build rule for target.
+vis_path_node/fast:
+	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/build
+.PHONY : vis_path_node/fast
+
+#=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_eus
+
+# Build rule for target.
+visualization_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_eus
+.PHONY : visualization_msgs_generate_messages_eus
+
+# fast build rule for target.
+visualization_msgs_generate_messages_eus/fast:
+	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
+.PHONY : visualization_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named waypoints_follow_node
+
+# Build rule for target.
+waypoints_follow_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 waypoints_follow_node
+.PHONY : waypoints_follow_node
+
+# fast build rule for target.
+waypoints_follow_node/fast:
+	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/build
+.PHONY : waypoints_follow_node/fast
+
+#=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_cpp
+
+# Build rule for target.
+visualization_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_cpp
+.PHONY : visualization_msgs_generate_messages_cpp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
+.PHONY : visualization_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named waypoints_record_node
+
+# Build rule for target.
+waypoints_record_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 waypoints_record_node
+.PHONY : waypoints_record_node
+
+# fast build rule for target.
+waypoints_record_node/fast:
+	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/build
+.PHONY : waypoints_record_node/fast
+
+#=============================================================================
+# Target rules for targets named follow_node
+
+# Build rule for target.
+follow_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 follow_node
+.PHONY : follow_node
+
+# fast build rule for target.
+follow_node/fast:
+	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/build
+.PHONY : follow_node/fast
+
+#=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_lisp
+
+# Build rule for target.
+visualization_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_lisp
+.PHONY : visualization_msgs_generate_messages_lisp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
+.PHONY : visualization_msgs_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named control_msgs_generate_messages_py
@@ -6482,14 +6508,16 @@ help:
 	@echo "... bond_generate_messages_lisp"
 	@echo "... pointcloud_to_laserscan_node"
 	@echo "... roslint_pointcloud_to_laserscan"
-	@echo "... waypoints_follow_node"
-	@echo "... visualization_msgs_generate_messages_eus"
-	@echo "... visualization_msgs_generate_messages_cpp"
-	@echo "... vis_path_node"
-	@echo "... visualization_msgs_generate_messages_lisp"
-	@echo "... visualization_msgs_generate_messages_py"
-	@echo "... visualization_msgs_generate_messages_nodejs"
 	@echo "... path_follow_node"
+	@echo "... visualization_msgs_generate_messages_nodejs"
+	@echo "... visualization_msgs_generate_messages_py"
+	@echo "... vis_path_node"
+	@echo "... visualization_msgs_generate_messages_eus"
+	@echo "... waypoints_follow_node"
+	@echo "... visualization_msgs_generate_messages_cpp"
+	@echo "... waypoints_record_node"
+	@echo "... follow_node"
+	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... control_msgs_generate_messages_py"
 	@echo "... control_msgs_generate_messages_nodejs"
 	@echo "... controller_manager_msgs_generate_messages_lisp"

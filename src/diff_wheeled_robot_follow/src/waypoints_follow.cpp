@@ -29,9 +29,9 @@ public:
             float x = json_it.value()[0];
             float y =json_it.value()[1];
             float z=json_it.value()[2];
-            x/=10;
-            y/=10;
-            z/=10;
+            // x/=10;
+            // y/=10;
+            // z/=10;
              point.emplace_back(x);
             point.emplace_back(y);
             point.emplace_back(z);
@@ -47,7 +47,7 @@ private:
     ifstream path_file;
     json json_data;
 };
-PathReader pr("./path_E3.json");
+PathReader pr("./path.json");
 class FollowPath
 {
 public:
@@ -55,7 +55,7 @@ public:
     {
         distance_tolerance = dis_tolerance;
         odom_frame_id="odom";
-        base_frame_id="base_footprint"; //base_link
+        base_frame_id="base_link"; //base_link
         frame_id="map";
     }
 
@@ -94,6 +94,7 @@ public:
                     listener.lookupTransform(odom_frame_id,base_frame_id,now,  transform);
                     distance = sqrt(pow(waypoints[i][0]-transform.getOrigin().getX(),2)+pow(waypoints[i][1]-transform.getOrigin().getY(),2));
                 }
+                distance=10;
             }
         }
     }
@@ -113,7 +114,7 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "follow_path");
     ros::NodeHandle nh;
-    FollowPath fp(0.5);
+    FollowPath fp(0.4);
      fp.execute();
      return 0;
 }

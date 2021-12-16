@@ -10,12 +10,8 @@
 #   short_desc:     Short description (optional)
 
 subscribers:
-  - name:        "simple keyboard controller"
-    topic:       "input/simple_key"
-    timeout:     1.0
-    priority:    7
   - name:        "keyboard controller"
-    topic:       "input/key"
+    topic:       "input/keyboard"
     timeout:     1.0
     priority:    6
   - name:        "Navigation"

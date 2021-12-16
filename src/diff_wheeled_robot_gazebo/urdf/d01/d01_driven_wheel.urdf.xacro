@@ -1,6 +1,146 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="driven_wheel">
-    <xacro:macro name="driven_wheel" params="">
-        
+
+    <xacro:property name="castor_mount_link_length" value="0.1145"/>
+    <xacro:property name="castor_mount_link_width" value=" 0.10"/>
+    <xacro:property name="castor_mount_link_height" value=" 0.0057"/>
+
+    <xacro:property name="castor_dummy_link_length" value="0.02"/>
+    <xacro:property name="castor_dummy_link_width" value="0.02"/>
+    <xacro:property name="castor_dummy_link_height" value="0.02"/>
+
+
+    <xacro:macro name="castor_mount" params="parent name base_x_origin_to_castor_mount_origin base_y_origin_to_castor_mount_origin base_z_origin_to_castor_mount_origin translateX translateY">
+        <link name="${name}_castor_mount_link">
+            <visual>
+                <origin xyz="0.0 0.0 0" rpy="0.0 0 0.0"/>
+                <geometry>
+                    <box size="${castor_mount_link_length} ${castor_mount_link_width} ${castor_mount_link_height}"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0.0 0.0 0" rpy="0.0 0 0.0"/>
+                <geometry>
+                    <box size="${castor_mount_link_length} ${castor_mount_link_width} ${castor_mount_link_height}"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.0 0.0 0" rpy="0.0 0 0.0"/>
+                <mass value="1"/>
+                <inertia ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.0" izz="1"/>
+            </inertial>
+        </link>
+        <joint name="${name}_castor_mount_joint" type="fixed">
+            <parent link="${parent}"/>
+            <child link="${name}_castor_mount_link"/>
+            <origin xyz="${base_x_origin_to_castor_mount_origin*translateX} ${base_y_origin_to_castor_mount_origin*translateY} ${base_z_origin_to_castor_mount_origin}" rpy="0.0 0.0 0.0"/>
+        </joint>
+        <gazebo reference="${name}_castor_mount_link">
+            <material>Gazebo/White</material>
+            <turnGravityOff>false</turnGravityOff>
+        </gazebo>
     </xacro:macro>
+
+    <xacro:macro name="castor_dummy" params="parent name">
+        <link name="${name}_castor_dummy_link">
+            <visual>
+                <origin xyz="0 0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <box size="${castor_dummy_link_width} ${castor_dummy_link_length} ${castor_dummy_link_height}"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <box size="${castor_dummy_link_width} ${castor_dummy_link_length} ${castor_dummy_link_height}"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0 0 0.0" rpy="0.0 0.0 0.0"/>
+                <mass value="1"/>
+                <inertia ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.0" izz="1"/>
+            </inertial>
+        </link>
+        <joint name="${name}_castor_dummy_joint" type="continuous">
+            <parent link="${parent}"/>
+            <child link="${name}_castor_dummy_link"/>
+            <axis xyz="0 0 1"/>
+            <origin xyz="0 0 -0.05" rpy="0 0 0"/>
+            <limit effort="100" velocity="100"/>
+            <joint_properties damping="0.0" friction="1.5"/>
+        </joint>
+        <gazebo reference="${name}_castor_dummy_link">
+            <material>Gazebo/White</material>
+            <turnGravityOff>false</turnGravityOff>
+        </gazebo>
+    </xacro:macro>
+
+    <xacro:macro name="driven_wheel" params="parent name radius length">
+        <link name="${name}_driven_wheel_link">
+            <visual>
+                <origin xyz="0.0 0.0 ${-radius}" rpy="${M_PI/2} 0 0.0"/>
+
+                <geometry>
+                    <cylinder radius="${radius}" length="${length}"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0.0 0.0 ${-radius}" rpy="${M_PI/2} 0 0.0"/>
+                <geometry>
+                    <cylinder radius="${radius}" length="${length}"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.0 0.0 ${-radius}" rpy="${M_PI/2} 0 0.0"/>
+                <mass value="1"/>
+                <inertia ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.0" izz="1"/>
+            </inertial>
+        </link>
+        <joint name="${name}_driven_wheel_joint" type="continuous">
+            <parent link="${parent}"/>
+            <child link="${name}_driven_wheel_link"/>
+            <axis xyz="0 1 0"/>
+            <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+            <limit effort="100" velocity="100"/>
+            <joint_properties damping="0.0" friction="1.5"/>
+        </joint>
+        <gazebo reference="${name}_castor_dummy_link">
+            <material>Gazebo/Black</material>
+            <turnGravityOff>false</turnGravityOff>
+        </gazebo>
+
+    </xacro:macro>
+
+    <xacro:macro name="driven_wheel_sphere" params="name parent radius base_x_origin_to_wheel_origin base_y_origin_to_wheel_origin base_z_origin_to_wheel_origin translateX translateY">
+        <link name="${name}_driven_wheel_sphere_link">
+            <visual>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <sphere radius="${radius}"/>
+                </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <sphere radius="${radius}"/>
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <mass value="1"/>
+                <inertia ixx="1" ixy="0.0" ixz="0" iyy="1" iyz="0.0" izz="1"/>
+            </inertial>
+        </link>
+        <joint name="${name}_driven_wheel_sphere_joint" type="fixed">
+            <parent link="${parent}"/>
+            <child link="${name}_driven_wheel_sphere_link"/>
+            <origin xyz="${base_x_origin_to_wheel_origin*translateX} ${base_y_origin_to_wheel_origin*translateY} ${base_z_origin_to_wheel_origin}" rpy="0.0 0.0 0.0"/>
+        </joint>
+
+        <gazebo reference="${name}_driven_wheel_sphere_link">
+            <material>Gazebo/Black</material>
+            <turnGravityOff>false</turnGravityOff>
+        </gazebo>
+    </xacro:macro>
+
 </robot>

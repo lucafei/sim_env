@@ -41,7 +41,7 @@
   <!-- caster wheel radius and height -->
   <!-- caster wheel mass -->
   <xacro:property name="caster_f_height" value="0.04" />
-  <xacro:property name="caster_f_radius" value="0.025" />
+  <xacro:property name="caster_f_radius" value="0.028" />
   <xacro:property name="caster_f_mass" value="0.5" /> <!-- in kg-->
 
 
@@ -49,7 +49,7 @@
   <!-- caster wheel radius and height -->
   <!-- caster wheel mass -->
   <xacro:property name="caster_b_height" value="0.04" />
-  <xacro:property name="caster_b_radius" value="0.025" />
+  <xacro:property name="caster_b_radius" value="0.0275" />
   <xacro:property name="caster_b_mass" value="0.5" /> <!-- in kg-->
 
 
@@ -261,9 +261,9 @@
       <wheelSeparation>${2*base_radius}</wheelSeparation>
       <wheelDiameter>${2*wheel_radius}</wheelDiameter>
       <broadcastTF>1</broadcastTF>
-      <wheelTorque>30</wheelTorque>
+      <wheelTorque>100</wheelTorque>
       <wheelAcceleration>2.5</wheelAcceleration>
-      <commandTopic>cmd_vel</commandTopic>
+      <commandTopic>/cmd_vel</commandTopic>
       <odometryFrame>odom</odometryFrame> 
       <odometryTopic>odom</odometryTopic> 
       <robotBaseFrame>base_footprint</robotBaseFrame>

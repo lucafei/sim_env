@@ -142,6 +142,8 @@ include_directories(
  add_executable(path_follow_node src/follow_path.cpp)
  add_executable(vis_path_node src/vis_path.cpp)
  add_executable(waypoints_follow_node src/waypoints_follow.cpp)
+ add_executable(waypoints_record_node src/waypoints_record.cpp)
+ add_executable(follow_node src/follow_node.cc)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -162,7 +164,12 @@ target_link_libraries(vis_path_node
 target_link_libraries(waypoints_follow_node
 ${catkin_LIBRARIES}
 )
-
+target_link_libraries(waypoints_record_node
+${catkin_LIBRARIES}
+)
+target_link_libraries(follow_node
+${catkin_LIBRARIES}
+)
 #############
 ## Install ##
 #############

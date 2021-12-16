@@ -68,6 +68,17 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -80,16 +91,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -100,6 +101,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -113,27 +125,15 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,94 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/rule:
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/rule
-.PHONY : diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/rule
+diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/rule:
+	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/rule
+.PHONY : diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/rule
 
 # Convenience name for target.
-waypoints_follow_node: diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/rule
+path_follow_node: diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/rule
 
-.PHONY : waypoints_follow_node
+.PHONY : path_follow_node
 
 # fast build rule for target.
-waypoints_follow_node/fast:
-	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/build
-.PHONY : waypoints_follow_node/fast
-
-# Convenience name for target.
-diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-.PHONY : diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_eus: diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_eus
-
-# fast build rule for target.
-visualization_msgs_generate_messages_eus/fast:
-	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
-.PHONY : visualization_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-.PHONY : diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_cpp: diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_cpp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_cpp/fast:
-	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
-.PHONY : visualization_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/rule:
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/rule
-.PHONY : diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/rule
-
-# Convenience name for target.
-vis_path_node: diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/rule
-
-.PHONY : vis_path_node
-
-# fast build rule for target.
-vis_path_node/fast:
-	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/build
-.PHONY : vis_path_node/fast
-
-# Convenience name for target.
-diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-.PHONY : diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_lisp: diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_lisp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_lisp/fast:
-	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
-.PHONY : visualization_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-.PHONY : diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_py: diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_py
-
-# fast build rule for target.
-visualization_msgs_generate_messages_py/fast:
-	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
-.PHONY : visualization_msgs_generate_messages_py/fast
+path_follow_node/fast:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/build
+.PHONY : path_follow_node/fast
 
 # Convenience name for target.
 diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule:
@@ -273,19 +198,151 @@ visualization_msgs_generate_messages_nodejs/fast:
 .PHONY : visualization_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/rule:
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/rule
-.PHONY : diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/rule
+diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
+	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+.PHONY : diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-path_follow_node: diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/rule
+visualization_msgs_generate_messages_py: diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
 
-.PHONY : path_follow_node
+.PHONY : visualization_msgs_generate_messages_py
 
 # fast build rule for target.
-path_follow_node/fast:
-	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/path_follow_node.dir/build
-.PHONY : path_follow_node/fast
+visualization_msgs_generate_messages_py/fast:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
+.PHONY : visualization_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/rule:
+	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/rule
+.PHONY : diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/rule
+
+# Convenience name for target.
+vis_path_node: diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/rule
+
+.PHONY : vis_path_node
+
+# fast build rule for target.
+vis_path_node/fast:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/vis_path_node.dir/build
+.PHONY : vis_path_node/fast
+
+# Convenience name for target.
+diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
+	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+.PHONY : diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_eus: diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_eus
+
+# fast build rule for target.
+visualization_msgs_generate_messages_eus/fast:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
+.PHONY : visualization_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/rule:
+	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/rule
+.PHONY : diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/rule
+
+# Convenience name for target.
+waypoints_follow_node: diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/rule
+
+.PHONY : waypoints_follow_node
+
+# fast build rule for target.
+waypoints_follow_node/fast:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/build
+.PHONY : waypoints_follow_node/fast
+
+# Convenience name for target.
+diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
+	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+.PHONY : diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_cpp: diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_cpp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_cpp/fast:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
+.PHONY : visualization_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/rule:
+	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/rule
+.PHONY : diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/rule
+
+# Convenience name for target.
+waypoints_record_node: diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/rule
+
+.PHONY : waypoints_record_node
+
+# fast build rule for target.
+waypoints_record_node/fast:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/build
+.PHONY : waypoints_record_node/fast
+
+# Convenience name for target.
+diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/rule:
+	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/rule
+.PHONY : diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/rule
+
+# Convenience name for target.
+follow_node: diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/rule
+
+.PHONY : follow_node
+
+# fast build rule for target.
+follow_node/fast:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/build
+.PHONY : follow_node/fast
+
+# Convenience name for target.
+diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
+	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+.PHONY : diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_lisp: diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_lisp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_lisp/fast:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make diff_wheeled_robot_follow/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
+.PHONY : visualization_msgs_generate_messages_lisp/fast
+
+src/follow_node.o: src/follow_node.cc.o
+
+.PHONY : src/follow_node.o
+
+# target to build an object file
+src/follow_node.cc.o:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/src/follow_node.cc.o
+.PHONY : src/follow_node.cc.o
+
+src/follow_node.i: src/follow_node.cc.i
+
+.PHONY : src/follow_node.i
+
+# target to preprocess a source file
+src/follow_node.cc.i:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/src/follow_node.cc.i
+.PHONY : src/follow_node.cc.i
+
+src/follow_node.s: src/follow_node.cc.s
+
+.PHONY : src/follow_node.s
+
+# target to generate assembly for a file
+src/follow_node.cc.s:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/follow_node.dir/src/follow_node.cc.s
+.PHONY : src/follow_node.cc.s
 
 src/follow_path.o: src/follow_path.cpp.o
 
@@ -368,6 +425,33 @@ src/waypoints_follow.cpp.s:
 	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/waypoints_follow_node.dir/src/waypoints_follow.cpp.s
 .PHONY : src/waypoints_follow.cpp.s
 
+src/waypoints_record.o: src/waypoints_record.cpp.o
+
+.PHONY : src/waypoints_record.o
+
+# target to build an object file
+src/waypoints_record.cpp.o:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/src/waypoints_record.cpp.o
+.PHONY : src/waypoints_record.cpp.o
+
+src/waypoints_record.i: src/waypoints_record.cpp.i
+
+.PHONY : src/waypoints_record.i
+
+# target to preprocess a source file
+src/waypoints_record.cpp.i:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/src/waypoints_record.cpp.i
+.PHONY : src/waypoints_record.cpp.i
+
+src/waypoints_record.s: src/waypoints_record.cpp.s
+
+.PHONY : src/waypoints_record.s
+
+# target to generate assembly for a file
+src/waypoints_record.cpp.s:
+	cd /home/fyin/sim_env/build && $(MAKE) -f diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/build.make diff_wheeled_robot_follow/CMakeFiles/waypoints_record_node.dir/src/waypoints_record.cpp.s
+.PHONY : src/waypoints_record.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -375,20 +459,25 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... install/local"
-	@echo "... test"
-	@echo "... waypoints_follow_node"
-	@echo "... visualization_msgs_generate_messages_eus"
-	@echo "... edit_cache"
-	@echo "... visualization_msgs_generate_messages_cpp"
-	@echo "... vis_path_node"
-	@echo "... visualization_msgs_generate_messages_lisp"
-	@echo "... visualization_msgs_generate_messages_py"
-	@echo "... visualization_msgs_generate_messages_nodejs"
 	@echo "... path_follow_node"
+	@echo "... visualization_msgs_generate_messages_nodejs"
+	@echo "... visualization_msgs_generate_messages_py"
+	@echo "... vis_path_node"
+	@echo "... edit_cache"
+	@echo "... visualization_msgs_generate_messages_eus"
+	@echo "... waypoints_follow_node"
+	@echo "... visualization_msgs_generate_messages_cpp"
+	@echo "... waypoints_record_node"
+	@echo "... install"
+	@echo "... follow_node"
+	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... install/local"
+	@echo "... visualization_msgs_generate_messages_lisp"
+	@echo "... list_install_components"
+	@echo "... src/follow_node.o"
+	@echo "... src/follow_node.i"
+	@echo "... src/follow_node.s"
 	@echo "... src/follow_path.o"
 	@echo "... src/follow_path.i"
 	@echo "... src/follow_path.s"
@@ -398,6 +487,9 @@ help:
 	@echo "... src/waypoints_follow.o"
 	@echo "... src/waypoints_follow.i"
 	@echo "... src/waypoints_follow.s"
+	@echo "... src/waypoints_record.o"
+	@echo "... src/waypoints_record.i"
+	@echo "... src/waypoints_record.s"
 .PHONY : help
 
 
