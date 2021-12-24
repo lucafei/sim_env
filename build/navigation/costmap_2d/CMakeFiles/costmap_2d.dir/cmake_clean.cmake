@@ -9,8 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/costmap_2d.dir/src/costmap_math.cpp.o"
   "CMakeFiles/costmap_2d.dir/src/footprint.cpp.o"
   "CMakeFiles/costmap_2d.dir/src/costmap_layer.cpp.o"
-  "/home/fyin/sim_env/devel/lib/libcostmap_2d.pdb"
-  "/home/fyin/sim_env/devel/lib/libcostmap_2d.so"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libcostmap_2d.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libcostmap_2d.so"
 )
 
 # Per-language clean rules from dependency scanning.

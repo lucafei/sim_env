@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/teb_local_planner_generate_messages_lisp"
-  "/home/fyin/sim_env/devel/share/common-lisp/ros/teb_local_planner/msg/TrajectoryMsg.lisp"
-  "/home/fyin/sim_env/devel/share/common-lisp/ros/teb_local_planner/msg/TrajectoryPointMsg.lisp"
-  "/home/fyin/sim_env/devel/share/common-lisp/ros/teb_local_planner/msg/FeedbackMsg.lisp"
+  "/home/fyin/D01_WS/sim_env/devel/share/common-lisp/ros/teb_local_planner/msg/FeedbackMsg.lisp"
+  "/home/fyin/D01_WS/sim_env/devel/share/common-lisp/ros/teb_local_planner/msg/TrajectoryPointMsg.lisp"
+  "/home/fyin/D01_WS/sim_env/devel/share/common-lisp/ros/teb_local_planner/msg/TrajectoryMsg.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

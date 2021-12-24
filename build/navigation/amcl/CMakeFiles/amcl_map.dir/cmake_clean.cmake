@@ -4,8 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/amcl_map.dir/src/amcl/map/map_range.c.o"
   "CMakeFiles/amcl_map.dir/src/amcl/map/map_store.c.o"
   "CMakeFiles/amcl_map.dir/src/amcl/map/map_draw.c.o"
-  "/home/fyin/sim_env/devel/lib/libamcl_map.pdb"
-  "/home/fyin/sim_env/devel/lib/libamcl_map.so"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libamcl_map.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libamcl_map.so"
 )
 
 # Per-language clean rules from dependency scanning.

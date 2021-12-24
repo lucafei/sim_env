@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/base_local_planner_generate_messages_cpp"
-  "/home/fyin/sim_env/devel/include/base_local_planner/Position2DInt.h"
+  "/home/fyin/D01_WS/sim_env/devel/include/base_local_planner/Position2DInt.h"
 )
 
 # Per-language clean rules from dependency scanning.

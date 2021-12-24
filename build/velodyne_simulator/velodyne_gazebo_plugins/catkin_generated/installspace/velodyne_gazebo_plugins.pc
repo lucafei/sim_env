@@ -1,4 +1,4 @@
-prefix=/home/fyin/sim_env/install
+prefix=/home/fyin/D01_WS/sim_env/install
 
 Name: velodyne_gazebo_plugins
 Description: Description of velodyne_gazebo_plugins

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/costmap_converter_generate_messages_eus"
-  "/home/fyin/sim_env/devel/share/roseus/ros/costmap_converter/msg/ObstacleArrayMsg.l"
-  "/home/fyin/sim_env/devel/share/roseus/ros/costmap_converter/msg/ObstacleMsg.l"
-  "/home/fyin/sim_env/devel/share/roseus/ros/costmap_converter/manifest.l"
+  "/home/fyin/D01_WS/sim_env/devel/share/roseus/ros/costmap_converter/msg/ObstacleArrayMsg.l"
+  "/home/fyin/D01_WS/sim_env/devel/share/roseus/ros/costmap_converter/msg/ObstacleMsg.l"
+  "/home/fyin/D01_WS/sim_env/devel/share/roseus/ros/costmap_converter/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

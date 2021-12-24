@@ -1,8 +1,8 @@
-# Install script for directory: /home/fyin/sim_env/src/stage_controllers
+# Install script for directory: /home/fyin/D01_WS/sim_env/src/stage_controllers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/fyin/sim_env/install")
+  set(CMAKE_INSTALL_PREFIX "/home/fyin/D01_WS/sim_env/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/fyin/sim_env/build/stage_controllers/catkin_generated/installspace/stage_controllers.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/fyin/D01_WS/sim_env/build/stage_controllers/catkin_generated/installspace/stage_controllers.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/stage_controllers/cmake" TYPE FILE FILES
-    "/home/fyin/sim_env/build/stage_controllers/catkin_generated/installspace/stage_controllersConfig.cmake"
-    "/home/fyin/sim_env/build/stage_controllers/catkin_generated/installspace/stage_controllersConfig-version.cmake"
+    "/home/fyin/D01_WS/sim_env/build/stage_controllers/catkin_generated/installspace/stage_controllersConfig.cmake"
+    "/home/fyin/D01_WS/sim_env/build/stage_controllers/catkin_generated/installspace/stage_controllersConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/stage_controllers" TYPE FILE FILES "/home/fyin/sim_env/src/stage_controllers/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/stage_controllers" TYPE FILE FILES "/home/fyin/D01_WS/sim_env/src/stage_controllers/package.xml")
 endif()
 

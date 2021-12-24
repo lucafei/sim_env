@@ -1,0 +1,39 @@
+<!--
+thunder 2D scan localize with GPS
+2021-05-27: 镭神scan与GPS
+
+TODO: 建图时用GPS，定位时不用GPS，预测不行
+ISSUE: tf 发布频率只有1.25hz [2021-06-01]
+       默认有70hz?
+          -configuration_basename backpack_2d_localization.lua
+-->
+
+<launch>
+
+  <arg name="load_state_filename" default="/home/fyin/D01_WS/sim_env/src/diff_wheeled_robot_navigation/maps/map.pbstream"/>
+
+  <node name="cartographer_node" pkg="cartographer_ros"
+      type="cartographer_node" args="
+          -configuration_directory $(find diff_wheeled_robot_navigation)/cartographer_config
+          -configuration_basename thunder_2d_gps_localize.lua
+          -load_state_filename $(arg load_state_filename)
+          -load_frozen_state true"
+      output="screen">
+    <remap from="echoes" to="scan"/>
+  </node>
+
+  <!-- <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros" -->
+      <!-- type="cartographer_occupancy_grid_node" args="-resolution 0.05" /> -->
+
+  <!--node name="init_pose" pkg="cartographer_initialpose" type="init_pose"/-->
+
+  <node pkg="carto_init" type="carto_init_node" name="carto_init" output="screen">
+   <param name="carto_config_dir" value="$(find diff_wheeled_robot_navigation)/cartographer_config"/>
+   <param name="carto_config_basename" value="thunder_2d_gps_localize.lua"/>
+   <remap from="/carto_init/initialpose" to="/initialpose" />
+   <remap from="/carto_init/finish_trajectory" to="/finish_trajectory" />
+   <remap from="/carto_init/start_trajectory" to="/start_trajectory" />
+   <remap from="/carto_init/get_trajectory_states" to="/get_trajectory_states" />
+  </node>
+
+</launch>

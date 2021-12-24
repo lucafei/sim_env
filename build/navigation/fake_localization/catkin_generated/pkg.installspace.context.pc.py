@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "geometry_msgs;nav_msgs;roscpp;rospy".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "fake_localization"
-PROJECT_SPACE_DIR = "/home/fyin/sim_env/install"
-PROJECT_VERSION = "1.17.1"
+PROJECT_SPACE_DIR = "/home/fyin/D01_WS/sim_env/install"
+PROJECT_VERSION = "1.16.7"

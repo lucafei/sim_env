@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/abstract_action_base_test.dir/test/abstract_action_base.cpp.o"
-  "/home/fyin/sim_env/devel/lib/mbf_abstract_nav/abstract_action_base_test.pdb"
-  "/home/fyin/sim_env/devel/lib/mbf_abstract_nav/abstract_action_base_test"
+  "/home/fyin/D01_WS/sim_env/devel/lib/mbf_abstract_nav/abstract_action_base_test.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/mbf_abstract_nav/abstract_action_base_test"
 )
 
 # Per-language clean rules from dependency scanning.

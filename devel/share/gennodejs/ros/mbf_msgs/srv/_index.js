@@ -1,12 +1,12 @@
 
 "use strict";
 
-let CheckPose = require('./CheckPose.js')
 let CheckPath = require('./CheckPath.js')
+let CheckPose = require('./CheckPose.js')
 let CheckPoint = require('./CheckPoint.js')
 
 module.exports = {
-  CheckPose: CheckPose,
   CheckPath: CheckPath,
+  CheckPose: CheckPose,
   CheckPoint: CheckPoint,
 };

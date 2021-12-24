@@ -6,7 +6,7 @@ from os import path as os_path
 from pkgutil import extend_path
 from sys import path as sys_path
 
-__extended_path = '/home/fyin/sim_env/src/TEB/move_base_flex/mbf_abstract_nav/src'.split(';')
+__extended_path = '/home/fyin/D01_WS/sim_env/src/TEB/move_base_flex/mbf_abstract_nav/src'.split(';')
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

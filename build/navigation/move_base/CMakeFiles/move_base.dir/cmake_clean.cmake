@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/move_base.dir/src/move_base.cpp.o"
-  "/home/fyin/sim_env/devel/lib/libmove_base.pdb"
-  "/home/fyin/sim_env/devel/lib/libmove_base.so"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libmove_base.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libmove_base.so"
 )
 
 # Per-language clean rules from dependency scanning.

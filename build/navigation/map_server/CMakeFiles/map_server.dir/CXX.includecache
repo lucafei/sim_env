@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/fyin/sim_env/src/navigation/map_server/include/map_server/image_loader.h
+/home/fyin/D01_WS/sim_env/src/navigation/map_server/include/map_server/image_loader.h
 nav_msgs/GetMap.h
-/home/fyin/sim_env/src/navigation/map_server/include/map_server/nav_msgs/GetMap.h
+/home/fyin/D01_WS/sim_env/src/navigation/map_server/include/map_server/nav_msgs/GetMap.h
 
-/home/fyin/sim_env/src/navigation/map_server/src/main.cpp
+/home/fyin/D01_WS/sim_env/src/navigation/map_server/src/main.cpp
 stdio.h
 -
 stdlib.h
@@ -20,17 +20,15 @@ fstream
 boost/filesystem.hpp
 -
 ros/ros.h
-/home/fyin/sim_env/src/navigation/map_server/src/ros/ros.h
+/home/fyin/D01_WS/sim_env/src/navigation/map_server/src/ros/ros.h
 ros/console.h
-/home/fyin/sim_env/src/navigation/map_server/src/ros/console.h
+/home/fyin/D01_WS/sim_env/src/navigation/map_server/src/ros/console.h
 map_server/image_loader.h
-/home/fyin/sim_env/src/navigation/map_server/src/map_server/image_loader.h
+/home/fyin/D01_WS/sim_env/src/navigation/map_server/src/map_server/image_loader.h
 nav_msgs/MapMetaData.h
-/home/fyin/sim_env/src/navigation/map_server/src/nav_msgs/MapMetaData.h
-nav_msgs/LoadMap.h
-/home/fyin/sim_env/src/navigation/map_server/src/nav_msgs/LoadMap.h
+/home/fyin/D01_WS/sim_env/src/navigation/map_server/src/nav_msgs/MapMetaData.h
 yaml-cpp/yaml.h
-/home/fyin/sim_env/src/navigation/map_server/src/yaml-cpp/yaml.h
+/home/fyin/D01_WS/sim_env/src/navigation/map_server/src/yaml-cpp/yaml.h
 
 /opt/ros/melodic/include/geometry_msgs/Point.h
 string
@@ -109,48 +107,6 @@ ros/message_operations.h
 -
 
 /opt/ros/melodic/include/nav_msgs/GetMapResponse.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-nav_msgs/OccupancyGrid.h
--
-
-/opt/ros/melodic/include/nav_msgs/LoadMap.h
-ros/service_traits.h
--
-nav_msgs/LoadMapRequest.h
--
-nav_msgs/LoadMapResponse.h
--
-
-/opt/ros/melodic/include/nav_msgs/LoadMapRequest.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-
-/opt/ros/melodic/include/nav_msgs/LoadMapResponse.h
 string
 -
 vector

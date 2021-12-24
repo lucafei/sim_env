@@ -1,4 +1,4 @@
-prefix=/home/fyin/sim_env/devel
+prefix=/home/fyin/D01_WS/sim_env/devel
 
 Name: mbot_gazebo
 Description: Description of mbot_gazebo

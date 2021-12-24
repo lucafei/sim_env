@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/dwa_local_planner_gencfg"
-  "/home/fyin/sim_env/devel/include/dwa_local_planner/DWAPlannerConfig.h"
-  "/home/fyin/sim_env/devel/share/dwa_local_planner/docs/DWAPlannerConfig.dox"
-  "/home/fyin/sim_env/devel/share/dwa_local_planner/docs/DWAPlannerConfig-usage.dox"
-  "/home/fyin/sim_env/devel/lib/python2.7/dist-packages/dwa_local_planner/cfg/DWAPlannerConfig.py"
-  "/home/fyin/sim_env/devel/share/dwa_local_planner/docs/DWAPlannerConfig.wikidoc"
+  "/home/fyin/D01_WS/sim_env/devel/include/dwa_local_planner/DWAPlannerConfig.h"
+  "/home/fyin/D01_WS/sim_env/devel/share/dwa_local_planner/docs/DWAPlannerConfig.dox"
+  "/home/fyin/D01_WS/sim_env/devel/share/dwa_local_planner/docs/DWAPlannerConfig-usage.dox"
+  "/home/fyin/D01_WS/sim_env/devel/lib/python2.7/dist-packages/dwa_local_planner/cfg/DWAPlannerConfig.py"
+  "/home/fyin/D01_WS/sim_env/devel/share/dwa_local_planner/docs/DWAPlannerConfig.wikidoc"
 )
 
 # Per-language clean rules from dependency scanning.

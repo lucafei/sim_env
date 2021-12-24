@@ -67,14 +67,14 @@ set(teb_local_planner_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(teb_local_planner_SOURCE_PREFIX /home/fyin/sim_env/src/TEB/teb_local_planner)
-  set(teb_local_planner_DEVEL_PREFIX /home/fyin/sim_env/devel)
+  set(teb_local_planner_SOURCE_PREFIX /home/fyin/D01_WS/sim_env/src/TEB/teb_local_planner)
+  set(teb_local_planner_DEVEL_PREFIX /home/fyin/D01_WS/sim_env/devel)
   set(teb_local_planner_INSTALL_PREFIX "")
   set(teb_local_planner_PREFIX ${teb_local_planner_DEVEL_PREFIX})
 else()
   set(teb_local_planner_SOURCE_PREFIX "")
   set(teb_local_planner_DEVEL_PREFIX "")
-  set(teb_local_planner_INSTALL_PREFIX /home/fyin/sim_env/install)
+  set(teb_local_planner_INSTALL_PREFIX /home/fyin/D01_WS/sim_env/install)
   set(teb_local_planner_PREFIX ${teb_local_planner_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(teb_local_planner_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/fyin/sim_env/devel/include;/home/fyin/sim_env/src/TEB/teb_local_planner/include;/usr/include/suitesparse;/opt/ros/melodic/include/g2o " STREQUAL " ")
+if(NOT "/home/fyin/D01_WS/sim_env/devel/include;/home/fyin/D01_WS/sim_env/src/TEB/teb_local_planner/include;/usr/include/suitesparse;/opt/ros/melodic/include/g2o " STREQUAL " ")
   set(teb_local_planner_INCLUDE_DIRS "")
-  set(_include_dirs "/home/fyin/sim_env/devel/include;/home/fyin/sim_env/src/TEB/teb_local_planner/include;/usr/include/suitesparse;/opt/ros/melodic/include/g2o")
+  set(_include_dirs "/home/fyin/D01_WS/sim_env/devel/include;/home/fyin/D01_WS/sim_env/src/TEB/teb_local_planner/include;/usr/include/suitesparse;/opt/ros/melodic/include/g2o")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/teb_local_planner " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/fyin/sim_env/devel/include;/home/fyin/sim_env/src/TEB/teb_local_pl
         message(FATAL_ERROR "Project 'teb_local_planner' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'teb_local_planner' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/fyin/sim_env/src/TEB/teb_local_planner/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'teb_local_planner' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/fyin/D01_WS/sim_env/src/TEB/teb_local_planner/${idir}'.  ${_report}")
     endif()
     _list_append_unique(teb_local_planner_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/fyin/sim_env/devel/lib;/home/fyin/sim_env/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/fyin/D01_WS/sim_env/devel/lib;/home/fyin/carto_ws/install_isolated/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

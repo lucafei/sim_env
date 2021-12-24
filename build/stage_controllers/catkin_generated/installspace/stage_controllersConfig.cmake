@@ -67,14 +67,14 @@ set(stage_controllers_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(stage_controllers_SOURCE_PREFIX /home/fyin/sim_env/src/stage_controllers)
-  set(stage_controllers_DEVEL_PREFIX /home/fyin/sim_env/devel)
+  set(stage_controllers_SOURCE_PREFIX /home/fyin/D01_WS/sim_env/src/stage_controllers)
+  set(stage_controllers_DEVEL_PREFIX /home/fyin/D01_WS/sim_env/devel)
   set(stage_controllers_INSTALL_PREFIX "")
   set(stage_controllers_PREFIX ${stage_controllers_DEVEL_PREFIX})
 else()
   set(stage_controllers_SOURCE_PREFIX "")
   set(stage_controllers_DEVEL_PREFIX "")
-  set(stage_controllers_INSTALL_PREFIX /home/fyin/sim_env/install)
+  set(stage_controllers_INSTALL_PREFIX /home/fyin/D01_WS/sim_env/install)
   set(stage_controllers_PREFIX ${stage_controllers_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/fyin/sim_env/install/lib;/home/fyin/sim_env/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/fyin/D01_WS/sim_env/install/lib;/home/fyin/carto_ws/install_isolated/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

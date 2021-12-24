@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/teb_local_planner_generate_messages_eus"
-  "/home/fyin/sim_env/devel/share/roseus/ros/teb_local_planner/msg/TrajectoryMsg.l"
-  "/home/fyin/sim_env/devel/share/roseus/ros/teb_local_planner/msg/TrajectoryPointMsg.l"
-  "/home/fyin/sim_env/devel/share/roseus/ros/teb_local_planner/msg/FeedbackMsg.l"
-  "/home/fyin/sim_env/devel/share/roseus/ros/teb_local_planner/manifest.l"
+  "/home/fyin/D01_WS/sim_env/devel/share/roseus/ros/teb_local_planner/msg/FeedbackMsg.l"
+  "/home/fyin/D01_WS/sim_env/devel/share/roseus/ros/teb_local_planner/msg/TrajectoryPointMsg.l"
+  "/home/fyin/D01_WS/sim_env/devel/share/roseus/ros/teb_local_planner/msg/TrajectoryMsg.l"
+  "/home/fyin/D01_WS/sim_env/devel/share/roseus/ros/teb_local_planner/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

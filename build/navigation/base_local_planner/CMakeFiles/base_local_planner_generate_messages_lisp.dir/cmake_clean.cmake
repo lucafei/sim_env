@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/base_local_planner_generate_messages_lisp"
-  "/home/fyin/sim_env/devel/share/common-lisp/ros/base_local_planner/msg/Position2DInt.lisp"
+  "/home/fyin/D01_WS/sim_env/devel/share/common-lisp/ros/base_local_planner/msg/Position2DInt.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

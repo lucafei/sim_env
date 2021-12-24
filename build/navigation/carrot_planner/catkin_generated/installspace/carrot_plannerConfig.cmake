@@ -67,14 +67,14 @@ set(carrot_planner_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(carrot_planner_SOURCE_PREFIX /home/fyin/sim_env/src/navigation/carrot_planner)
-  set(carrot_planner_DEVEL_PREFIX /home/fyin/sim_env/devel)
+  set(carrot_planner_SOURCE_PREFIX /home/fyin/D01_WS/sim_env/src/navigation/carrot_planner)
+  set(carrot_planner_DEVEL_PREFIX /home/fyin/D01_WS/sim_env/devel)
   set(carrot_planner_INSTALL_PREFIX "")
   set(carrot_planner_PREFIX ${carrot_planner_DEVEL_PREFIX})
 else()
   set(carrot_planner_SOURCE_PREFIX "")
   set(carrot_planner_DEVEL_PREFIX "")
-  set(carrot_planner_INSTALL_PREFIX /home/fyin/sim_env/install)
+  set(carrot_planner_INSTALL_PREFIX /home/fyin/D01_WS/sim_env/install)
   set(carrot_planner_PREFIX ${carrot_planner_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/fyin/sim_env/install/lib;/home/fyin/sim_env/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/fyin/D01_WS/sim_env/install/lib;/home/fyin/carto_ws/install_isolated/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -185,7 +185,7 @@ foreach(t ${carrot_planner_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "angles;base_local_planner;costmap_2d;nav_core;pluginlib;roscpp;tf2;tf2_ros")
+set(depends "base_local_planner;costmap_2d;nav_core;pluginlib;roscpp;tf2;tf2_ros")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

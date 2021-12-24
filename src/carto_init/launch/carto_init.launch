@@ -1,0 +1,12 @@
+<launch>
+
+<node pkg="carto_init" type="carto_init_node" name="carto_init" output="screen">
+ <param name="carto_config_dir" value="$(find thunder_navigation)/cartographer_config"/>
+ <param name="carto_config_basename" value="thunder_2d_gps_localize.lua"/>
+ <remap from="/carto_init/initialpose" to="/initialpose" />
+ <remap from="/carto_init/finish_trajectory" to="/finish_trajectory" />
+ <remap from="/carto_init/start_trajectory" to="/start_trajectory" />
+ <remap from="/carto_init/get_trajectory_states" to="/get_trajectory_states" />
+</node>
+
+</launch>

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "diff_wheeled_robot_follow"
-PROJECT_SPACE_DIR = "/home/fyin/sim_env/install"
+PROJECT_SPACE_DIR = "/home/fyin/D01_WS/sim_env/install"
 PROJECT_VERSION = "0.0.0"

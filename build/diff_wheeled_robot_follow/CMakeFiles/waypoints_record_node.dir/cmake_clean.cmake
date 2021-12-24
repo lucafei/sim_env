@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/waypoints_record_node.dir/src/waypoints_record.cpp.o"
-  "/home/fyin/sim_env/devel/lib/diff_wheeled_robot_follow/waypoints_record_node.pdb"
-  "/home/fyin/sim_env/devel/lib/diff_wheeled_robot_follow/waypoints_record_node"
+  "/home/fyin/D01_WS/sim_env/devel/lib/diff_wheeled_robot_follow/waypoints_record_node.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/diff_wheeled_robot_follow/waypoints_record_node"
 )
 
 # Per-language clean rules from dependency scanning.

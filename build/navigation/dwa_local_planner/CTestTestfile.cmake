@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/fyin/sim_env/src/navigation/dwa_local_planner
-# Build directory: /home/fyin/sim_env/build/navigation/dwa_local_planner
+# Source directory: /home/fyin/D01_WS/sim_env/src/navigation/dwa_local_planner
+# Build directory: /home/fyin/D01_WS/sim_env/build/navigation/dwa_local_planner
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

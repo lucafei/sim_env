@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/clear_tester.dir/test/clear_tester.cpp.o"
-  "/home/fyin/sim_env/devel/lib/clear_costmap_recovery/clear_tester.pdb"
-  "/home/fyin/sim_env/devel/lib/clear_costmap_recovery/clear_tester"
+  "/home/fyin/D01_WS/sim_env/devel/lib/clear_costmap_recovery/clear_tester.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/clear_costmap_recovery/clear_tester"
 )
 
 # Per-language clean rules from dependency scanning.

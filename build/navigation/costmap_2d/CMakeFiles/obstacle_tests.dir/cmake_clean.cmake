@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/obstacle_tests.dir/test/obstacle_tests.cpp.o"
-  "/home/fyin/sim_env/devel/lib/costmap_2d/obstacle_tests.pdb"
-  "/home/fyin/sim_env/devel/lib/costmap_2d/obstacle_tests"
+  "/home/fyin/D01_WS/sim_env/devel/lib/costmap_2d/obstacle_tests.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/costmap_2d/obstacle_tests"
 )
 
 # Per-language clean rules from dependency scanning.

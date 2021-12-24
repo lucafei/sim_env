@@ -1,8 +1,8 @@
-prefix=/home/fyin/sim_env/devel
+prefix=/home/fyin/D01_WS/sim_env/devel
 
 Name: costmap_converter
 Description: Description of costmap_converter
 Version: 0.0.13
-Cflags: -I/home/fyin/sim_env/devel/include -I/home/fyin/sim_env/src/TEB/costmap_converter/include
+Cflags: -I/home/fyin/D01_WS/sim_env/devel/include -I/home/fyin/D01_WS/sim_env/src/TEB/costmap_converter/include
 Libs: -L${prefix}/lib -lcostmap_converter
 Requires: geometry_msgs pluginlib roscpp std_msgs message_runtime dynamic_reconfigure costmap_2d

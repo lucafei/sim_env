@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "geometry_msgs;message_runtime;nav_core;nav_msgs;pluginlib;roscpp;sensor_msgs;visualization_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lnavfn".split(';') if "-lnavfn" != "" else []
 PROJECT_NAME = "navfn"
-PROJECT_SPACE_DIR = "/home/fyin/sim_env/install"
-PROJECT_VERSION = "1.17.1"
+PROJECT_SPACE_DIR = "/home/fyin/D01_WS/sim_env/install"
+PROJECT_VERSION = "1.16.7"

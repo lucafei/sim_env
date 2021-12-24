@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner.cpp.o"
   "CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o"
-  "/home/fyin/sim_env/devel/lib/libtrajectory_planner_ros.pdb"
-  "/home/fyin/sim_env/devel/lib/libtrajectory_planner_ros.so"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libtrajectory_planner_ros.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libtrajectory_planner_ros.so"
 )
 
 # Per-language clean rules from dependency scanning.

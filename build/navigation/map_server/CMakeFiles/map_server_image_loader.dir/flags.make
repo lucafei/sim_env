@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DHAVE_YAMLCPP_GT_0_5_0 -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"map_server\" -Dmap_server_image_loader_EXPORTS
 
-CXX_INCLUDES = -I/home/fyin/sim_env/src/navigation/map_server/include -I/usr/include/bullet -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/SDL 
+CXX_INCLUDES = -I/home/fyin/D01_WS/sim_env/src/navigation/map_server/include -I/usr/include/bullet -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/SDL 
 

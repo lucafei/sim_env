@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/line_iterator.dir/test/line_iterator_test.cpp.o"
-  "/home/fyin/sim_env/devel/lib/base_local_planner/line_iterator.pdb"
-  "/home/fyin/sim_env/devel/lib/base_local_planner/line_iterator"
+  "/home/fyin/D01_WS/sim_env/devel/lib/base_local_planner/line_iterator.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/base_local_planner/line_iterator"
 )
 
 # Per-language clean rules from dependency scanning.

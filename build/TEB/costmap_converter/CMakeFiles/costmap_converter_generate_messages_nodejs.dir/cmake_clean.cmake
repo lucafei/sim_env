@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/costmap_converter_generate_messages_nodejs"
-  "/home/fyin/sim_env/devel/share/gennodejs/ros/costmap_converter/msg/ObstacleArrayMsg.js"
-  "/home/fyin/sim_env/devel/share/gennodejs/ros/costmap_converter/msg/ObstacleMsg.js"
+  "/home/fyin/D01_WS/sim_env/devel/share/gennodejs/ros/costmap_converter/msg/ObstacleArrayMsg.js"
+  "/home/fyin/D01_WS/sim_env/devel/share/gennodejs/ros/costmap_converter/msg/ObstacleMsg.js"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,8 +1,8 @@
 # generated from catkin/cmake/template/pkg.context.pc.in
 CATKIN_PACKAGE_PREFIX = ""
-PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/fyin/sim_env/src/navigation/carrot_planner/include".split(';') if "/home/fyin/sim_env/src/navigation/carrot_planner/include" != "" else []
-PROJECT_CATKIN_DEPENDS = "angles;base_local_planner;costmap_2d;nav_core;pluginlib;roscpp;tf2;tf2_ros".replace(';', ' ')
+PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/fyin/D01_WS/sim_env/src/navigation/carrot_planner/include".split(';') if "/home/fyin/D01_WS/sim_env/src/navigation/carrot_planner/include" != "" else []
+PROJECT_CATKIN_DEPENDS = "base_local_planner;costmap_2d;nav_core;pluginlib;roscpp;tf2;tf2_ros".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lcarrot_planner".split(';') if "-lcarrot_planner" != "" else []
 PROJECT_NAME = "carrot_planner"
-PROJECT_SPACE_DIR = "/home/fyin/sim_env/devel"
-PROJECT_VERSION = "1.17.1"
+PROJECT_SPACE_DIR = "/home/fyin/D01_WS/sim_env/devel"
+PROJECT_VERSION = "1.16.7"

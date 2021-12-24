@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/fyin/sim_env/src
-# Build directory: /home/fyin/sim_env/build
+# Source directory: /home/fyin/D01_WS/sim_env/src
+# Build directory: /home/fyin/D01_WS/sim_env/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
@@ -11,21 +11,21 @@ subdirs("TEB/move_base_flex/move_base_flex")
 subdirs("navigation/navigation")
 subdirs("stage_controllers")
 subdirs("TEB/move_base_flex/mbf_abstract_core")
+subdirs("navigation_msgs/move_base_msgs")
 subdirs("TEB/move_base_flex/mbf_msgs")
 subdirs("velodyne_simulator/velodyne_description")
 subdirs("velodyne_simulator/velodyne_simulator")
-subdirs("mbot_navigation/mbot_navigation")
-subdirs("mbot_navigation/mbot_teleop")
 subdirs("navigation/map_server")
 subdirs("diff_wheeled_robot_record")
+subdirs("navigation_msgs/map_msgs")
 subdirs("navigation/amcl")
+subdirs("carto_init")
 subdirs("navigation/fake_localization")
 subdirs("TEB/move_base_flex/mbf_utility")
 subdirs("TEB/move_base_flex/mbf_abstract_nav")
 subdirs("TEB/move_base_flex/mbf_simple_nav")
 subdirs("pointcloud_to_laserscan")
 subdirs("diff_wheeled_robot_follow")
-subdirs("mbot_navigation/mbot_gazebo")
 subdirs("velodyne_simulator/velodyne_gazebo_plugins")
 subdirs("navigation/voxel_grid")
 subdirs("navigation/costmap_2d")
@@ -45,4 +45,3 @@ subdirs("navigation/move_base")
 subdirs("TEB/teb_local_planner")
 subdirs("diff_wheeled_robot_control")
 subdirs("diff_wheeled_robot_gazebo")
-subdirs("mbot_navigation/mbot_description")

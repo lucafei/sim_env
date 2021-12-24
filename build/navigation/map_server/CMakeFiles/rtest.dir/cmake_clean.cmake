@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rtest.dir/test/rtest.cpp.o"
   "CMakeFiles/rtest.dir/test/test_constants.cpp.o"
-  "/home/fyin/sim_env/devel/lib/map_server/rtest.pdb"
-  "/home/fyin/sim_env/devel/lib/map_server/rtest"
+  "/home/fyin/D01_WS/sim_env/devel/lib/map_server/rtest.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/map_server/rtest"
 )
 
 # Per-language clean rules from dependency scanning.

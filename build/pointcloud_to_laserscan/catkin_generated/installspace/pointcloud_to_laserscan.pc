@@ -1,4 +1,4 @@
-prefix=/home/fyin/sim_env/install
+prefix=/home/fyin/D01_WS/sim_env/install
 
 Name: pointcloud_to_laserscan
 Description: Description of pointcloud_to_laserscan

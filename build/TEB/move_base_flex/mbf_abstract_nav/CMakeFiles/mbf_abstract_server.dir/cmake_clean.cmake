@@ -8,8 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mbf_abstract_server.dir/src/abstract_planner_execution.cpp.o"
   "CMakeFiles/mbf_abstract_server.dir/src/abstract_controller_execution.cpp.o"
   "CMakeFiles/mbf_abstract_server.dir/src/abstract_recovery_execution.cpp.o"
-  "/home/fyin/sim_env/devel/lib/libmbf_abstract_server.pdb"
-  "/home/fyin/sim_env/devel/lib/libmbf_abstract_server.so"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libmbf_abstract_server.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libmbf_abstract_server.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -7,7 +7,8 @@
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
 
   <!-- 3. 定位[需要修改pbstream名称] -->
-  <include file="$(find diff_wheeled_robot_navigation)/launch/include/amcl.launch.xml"/>
+  <!--<include file="$(find diff_wheeled_robot_navigation)/launch/include/amcl.launch.xml"/>-->
+  <include file="$(find diff_wheeled_robot_navigation)/launch/include/thunder_localization_2d_gps.launch.xml"/>
 
   <!-- 4. 导航 -->
   <include file="$(find diff_wheeled_robot_navigation)/launch/include/move_base.launch.xml"/>

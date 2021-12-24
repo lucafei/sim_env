@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/mbf_costmap_nav.dir/src/move_base_server_node.cpp.o"
-  "/home/fyin/sim_env/devel/lib/mbf_costmap_nav/mbf_costmap_nav.pdb"
-  "/home/fyin/sim_env/devel/lib/mbf_costmap_nav/mbf_costmap_nav"
+  "/home/fyin/D01_WS/sim_env/devel/lib/mbf_costmap_nav/mbf_costmap_nav.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/mbf_costmap_nav/mbf_costmap_nav"
 )
 
 # Per-language clean rules from dependency scanning.

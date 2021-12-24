@@ -7,4 +7,10 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/fyin/sim_env/build'
+export CMAKE_PREFIX_PATH="/home/fyin/D01_WS/sim_env/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/fyin/D01_WS/sim_env/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/fyin/D01_WS/sim_env/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD='/home/fyin/D01_WS/sim_env/build'
+export PYTHONPATH="/home/fyin/D01_WS/sim_env/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES='/home/fyin/D01_WS/sim_env/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/fyin/D01_WS/sim_env/src:$ROS_PACKAGE_PATH"

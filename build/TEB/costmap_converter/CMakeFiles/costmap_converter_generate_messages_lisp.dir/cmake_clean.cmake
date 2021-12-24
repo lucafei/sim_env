@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/costmap_converter_generate_messages_lisp"
-  "/home/fyin/sim_env/devel/share/common-lisp/ros/costmap_converter/msg/ObstacleArrayMsg.lisp"
-  "/home/fyin/sim_env/devel/share/common-lisp/ros/costmap_converter/msg/ObstacleMsg.lisp"
+  "/home/fyin/D01_WS/sim_env/devel/share/common-lisp/ros/costmap_converter/msg/ObstacleArrayMsg.lisp"
+  "/home/fyin/D01_WS/sim_env/devel/share/common-lisp/ros/costmap_converter/msg/ObstacleMsg.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

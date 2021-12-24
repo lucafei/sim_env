@@ -2,8 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mbf_nav_core_wrapper.dir/src/nav_core_wrapper/wrapper_global_planner.cpp.o"
   "CMakeFiles/mbf_nav_core_wrapper.dir/src/nav_core_wrapper/wrapper_local_planner.cpp.o"
   "CMakeFiles/mbf_nav_core_wrapper.dir/src/nav_core_wrapper/wrapper_recovery_behavior.cpp.o"
-  "/home/fyin/sim_env/devel/lib/libmbf_nav_core_wrapper.pdb"
-  "/home/fyin/sim_env/devel/lib/libmbf_nav_core_wrapper.so"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libmbf_nav_core_wrapper.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libmbf_nav_core_wrapper.so"
 )
 
 # Per-language clean rules from dependency scanning.

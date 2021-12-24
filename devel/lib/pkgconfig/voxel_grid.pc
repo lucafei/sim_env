@@ -1,8 +1,8 @@
-prefix=/home/fyin/sim_env/devel
+prefix=/home/fyin/D01_WS/sim_env/devel
 
 Name: voxel_grid
 Description: Description of voxel_grid
-Version: 1.17.1
-Cflags: -I/home/fyin/sim_env/src/navigation/voxel_grid/include
+Version: 1.16.7
+Cflags: -I/home/fyin/D01_WS/sim_env/src/navigation/voxel_grid/include
 Libs: -L${prefix}/lib -lvoxel_grid
 Requires: roscpp

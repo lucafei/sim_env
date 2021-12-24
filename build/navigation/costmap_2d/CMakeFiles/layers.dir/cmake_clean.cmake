@@ -4,8 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/layers.dir/plugins/static_layer.cpp.o"
   "CMakeFiles/layers.dir/plugins/voxel_layer.cpp.o"
   "CMakeFiles/layers.dir/src/observation_buffer.cpp.o"
-  "/home/fyin/sim_env/devel/lib/liblayers.pdb"
-  "/home/fyin/sim_env/devel/lib/liblayers.so"
+  "/home/fyin/D01_WS/sim_env/devel/lib/liblayers.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/liblayers.so"
 )
 
 # Per-language clean rules from dependency scanning.

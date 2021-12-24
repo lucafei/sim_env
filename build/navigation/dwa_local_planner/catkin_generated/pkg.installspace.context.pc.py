@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "base_local_planner;dynamic_reconfigure;nav_msgs;pluginlib;sensor_msgs;roscpp;tf2;tf2_ros".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-ldwa_local_planner".split(';') if "-ldwa_local_planner" != "" else []
 PROJECT_NAME = "dwa_local_planner"
-PROJECT_SPACE_DIR = "/home/fyin/sim_env/install"
-PROJECT_VERSION = "1.17.1"
+PROJECT_SPACE_DIR = "/home/fyin/D01_WS/sim_env/install"
+PROJECT_VERSION = "1.16.7"

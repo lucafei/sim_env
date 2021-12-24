@@ -5,8 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mbf_costmap_server.dir/src/mbf_costmap_nav/costmap_recovery_execution.cpp.o"
   "CMakeFiles/mbf_costmap_server.dir/src/mbf_costmap_nav/costmap_wrapper.cpp.o"
   "CMakeFiles/mbf_costmap_server.dir/src/mbf_costmap_nav/footprint_helper.cpp.o"
-  "/home/fyin/sim_env/devel/lib/libmbf_costmap_server.pdb"
-  "/home/fyin/sim_env/devel/lib/libmbf_costmap_server.so"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libmbf_costmap_server.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libmbf_costmap_server.so"
 )
 
 # Per-language clean rules from dependency scanning.

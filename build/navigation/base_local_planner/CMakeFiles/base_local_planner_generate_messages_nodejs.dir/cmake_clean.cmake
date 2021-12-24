@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/base_local_planner_generate_messages_nodejs"
-  "/home/fyin/sim_env/devel/share/gennodejs/ros/base_local_planner/msg/Position2DInt.js"
+  "/home/fyin/D01_WS/sim_env/devel/share/gennodejs/ros/base_local_planner/msg/Position2DInt.js"
 )
 
 # Per-language clean rules from dependency scanning.

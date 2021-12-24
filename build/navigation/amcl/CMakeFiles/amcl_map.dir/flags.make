@@ -7,11 +7,11 @@ C_FLAGS = -fPIC
 
 C_DEFINES = -DHAVE_DRAND48 -DHAVE_UNISTD_H -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"amcl\" -Damcl_map_EXPORTS
 
-C_INCLUDES = -I/home/fyin/sim_env/devel/include -I/home/fyin/sim_env/src/navigation/amcl/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3 -I/home/fyin/sim_env/src/navigation/amcl/src/include 
+C_INCLUDES = -I/home/fyin/D01_WS/sim_env/devel/include -I/home/fyin/D01_WS/sim_env/src/navigation/amcl/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3 -I/home/fyin/D01_WS/sim_env/src/navigation/amcl/src/include 
 
 CXX_FLAGS = -fPIC   -std=gnu++11
 
 CXX_DEFINES = -DHAVE_DRAND48 -DHAVE_UNISTD_H -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"amcl\" -Damcl_map_EXPORTS
 
-CXX_INCLUDES = -I/home/fyin/sim_env/devel/include -I/home/fyin/sim_env/src/navigation/amcl/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3 -I/home/fyin/sim_env/src/navigation/amcl/src/include 
+CXX_INCLUDES = -I/home/fyin/D01_WS/sim_env/devel/include -I/home/fyin/D01_WS/sim_env/src/navigation/amcl/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3 -I/home/fyin/D01_WS/sim_env/src/navigation/amcl/src/include 
 

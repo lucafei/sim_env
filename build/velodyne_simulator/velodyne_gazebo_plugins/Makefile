@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fyin/sim_env/src
+CMAKE_SOURCE_DIR = /home/fyin/D01_WS/sim_env/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fyin/sim_env/build
+CMAKE_BINARY_DIR = /home/fyin/D01_WS/sim_env/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,29 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -103,27 +80,6 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -135,16 +91,60 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/fyin/sim_env/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fyin/sim_env/build/CMakeFiles /home/fyin/sim_env/build/velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/progress.marks
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fyin/sim_env/build/CMakeFiles 0
+	cd /home/fyin/D01_WS/sim_env/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fyin/D01_WS/sim_env/build/CMakeFiles /home/fyin/D01_WS/sim_env/build/velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/progress.marks
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fyin/D01_WS/sim_env/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/clean
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/preinstall
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/preinstall
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fyin/sim_env/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fyin/D01_WS/sim_env/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/rule:
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/rule
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/rule
 .PHONY : velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ gazebo_ros_velodyne_gpu_laser: velodyne_simulator/velodyne_gazebo_plugins/CMakeF
 
 # fast build rule for target.
 gazebo_ros_velodyne_gpu_laser/fast:
-	cd /home/fyin/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build
 .PHONY : gazebo_ros_velodyne_gpu_laser/fast
 
 # Convenience name for target.
 velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/rule:
-	cd /home/fyin/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/rule
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/rule
 .PHONY : velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/rule
 
 # Convenience name for target.
@@ -194,8 +194,23 @@ gazebo_ros_velodyne_laser: velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles
 
 # fast build rule for target.
 gazebo_ros_velodyne_laser/fast:
-	cd /home/fyin/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/build
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/build
 .PHONY : gazebo_ros_velodyne_laser/fast
+
+# Convenience name for target.
+velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_gencfg.dir/rule:
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f CMakeFiles/Makefile2 velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_gencfg.dir/rule
+.PHONY : velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_gencfg.dir/rule
+
+# Convenience name for target.
+gazebo_ros_gencfg: velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_gencfg.dir/rule
+
+.PHONY : gazebo_ros_gencfg
+
+# fast build rule for target.
+gazebo_ros_gencfg/fast:
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_gencfg.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_gencfg.dir/build
+.PHONY : gazebo_ros_gencfg/fast
 
 src/GazeboRosVelodyneLaser.o: src/GazeboRosVelodyneLaser.cpp.o
 
@@ -203,8 +218,8 @@ src/GazeboRosVelodyneLaser.o: src/GazeboRosVelodyneLaser.cpp.o
 
 # target to build an object file
 src/GazeboRosVelodyneLaser.cpp.o:
-	cd /home/fyin/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o
-	cd /home/fyin/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.o
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.o
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.o
 .PHONY : src/GazeboRosVelodyneLaser.cpp.o
 
 src/GazeboRosVelodyneLaser.i: src/GazeboRosVelodyneLaser.cpp.i
@@ -213,8 +228,8 @@ src/GazeboRosVelodyneLaser.i: src/GazeboRosVelodyneLaser.cpp.i
 
 # target to preprocess a source file
 src/GazeboRosVelodyneLaser.cpp.i:
-	cd /home/fyin/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.i
-	cd /home/fyin/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.i
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.i
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.i
 .PHONY : src/GazeboRosVelodyneLaser.cpp.i
 
 src/GazeboRosVelodyneLaser.s: src/GazeboRosVelodyneLaser.cpp.s
@@ -223,8 +238,8 @@ src/GazeboRosVelodyneLaser.s: src/GazeboRosVelodyneLaser.cpp.s
 
 # target to generate assembly for a file
 src/GazeboRosVelodyneLaser.cpp.s:
-	cd /home/fyin/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.s
-	cd /home/fyin/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.s
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_gpu_laser.dir/src/GazeboRosVelodyneLaser.cpp.s
+	cd /home/fyin/D01_WS/sim_env/build && $(MAKE) -f velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/build.make velodyne_simulator/velodyne_gazebo_plugins/CMakeFiles/gazebo_ros_velodyne_laser.dir/src/GazeboRosVelodyneLaser.cpp.s
 .PHONY : src/GazeboRosVelodyneLaser.cpp.s
 
 # Help Target
@@ -234,14 +249,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install"
-	@echo "... rebuild_cache"
+	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... gazebo_ros_velodyne_gpu_laser"
 	@echo "... gazebo_ros_velodyne_laser"
-	@echo "... install/local"
-	@echo "... test"
+	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... gazebo_ros_gencfg"
 	@echo "... src/GazeboRosVelodyneLaser.o"
 	@echo "... src/GazeboRosVelodyneLaser.i"
 	@echo "... src/GazeboRosVelodyneLaser.s"
@@ -256,6 +272,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fyin/sim_env/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fyin/D01_WS/sim_env/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

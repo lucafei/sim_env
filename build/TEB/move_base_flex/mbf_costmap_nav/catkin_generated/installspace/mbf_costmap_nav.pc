@@ -1,4 +1,4 @@
-prefix=/home/fyin/sim_env/install
+prefix=/home/fyin/D01_WS/sim_env/install
 
 Name: mbf_costmap_nav
 Description: Description of mbf_costmap_nav

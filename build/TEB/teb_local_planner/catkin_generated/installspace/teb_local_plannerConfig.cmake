@@ -67,14 +67,14 @@ set(teb_local_planner_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(teb_local_planner_SOURCE_PREFIX /home/fyin/sim_env/src/TEB/teb_local_planner)
-  set(teb_local_planner_DEVEL_PREFIX /home/fyin/sim_env/devel)
+  set(teb_local_planner_SOURCE_PREFIX /home/fyin/D01_WS/sim_env/src/TEB/teb_local_planner)
+  set(teb_local_planner_DEVEL_PREFIX /home/fyin/D01_WS/sim_env/devel)
   set(teb_local_planner_INSTALL_PREFIX "")
   set(teb_local_planner_PREFIX ${teb_local_planner_DEVEL_PREFIX})
 else()
   set(teb_local_planner_SOURCE_PREFIX "")
   set(teb_local_planner_DEVEL_PREFIX "")
-  set(teb_local_planner_INSTALL_PREFIX /home/fyin/sim_env/install)
+  set(teb_local_planner_INSTALL_PREFIX /home/fyin/D01_WS/sim_env/install)
   set(teb_local_planner_PREFIX ${teb_local_planner_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/fyin/sim_env/install/lib;/home/fyin/sim_env/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/fyin/D01_WS/sim_env/install/lib;/home/fyin/carto_ws/install_isolated/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

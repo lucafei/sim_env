@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/laserscan_to_pointcloud_node.dir/src/laserscan_to_pointcloud_node.cpp.o"
-  "/home/fyin/sim_env/devel/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node.pdb"
-  "/home/fyin/sim_env/devel/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node"
+  "/home/fyin/D01_WS/sim_env/devel/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,8 +1,8 @@
-# Install script for directory: /home/fyin/sim_env/src/navigation/nav_core
+# Install script for directory: /home/fyin/D01_WS/sim_env/src/navigation/nav_core
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/fyin/sim_env/install")
+  set(CMAKE_INSTALL_PREFIX "/home/fyin/D01_WS/sim_env/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/fyin/sim_env/build/navigation/nav_core/catkin_generated/installspace/nav_core.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/fyin/D01_WS/sim_env/build/navigation/nav_core/catkin_generated/installspace/nav_core.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/nav_core/cmake" TYPE FILE FILES
-    "/home/fyin/sim_env/build/navigation/nav_core/catkin_generated/installspace/nav_coreConfig.cmake"
-    "/home/fyin/sim_env/build/navigation/nav_core/catkin_generated/installspace/nav_coreConfig-version.cmake"
+    "/home/fyin/D01_WS/sim_env/build/navigation/nav_core/catkin_generated/installspace/nav_coreConfig.cmake"
+    "/home/fyin/D01_WS/sim_env/build/navigation/nav_core/catkin_generated/installspace/nav_coreConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/nav_core" TYPE FILE FILES "/home/fyin/sim_env/src/navigation/nav_core/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/nav_core" TYPE FILE FILES "/home/fyin/D01_WS/sim_env/src/navigation/nav_core/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/nav_core" TYPE DIRECTORY FILES "/home/fyin/sim_env/src/navigation/nav_core/include/nav_core/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/nav_core" TYPE DIRECTORY FILES "/home/fyin/D01_WS/sim_env/src/navigation/nav_core/include/nav_core/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE)
 endif()
 

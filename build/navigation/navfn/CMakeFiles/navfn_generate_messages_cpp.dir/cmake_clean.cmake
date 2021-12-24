@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/navfn_generate_messages_cpp"
-  "/home/fyin/sim_env/devel/include/navfn/MakeNavPlan.h"
-  "/home/fyin/sim_env/devel/include/navfn/SetCostmap.h"
+  "/home/fyin/D01_WS/sim_env/devel/include/navfn/MakeNavPlan.h"
+  "/home/fyin/D01_WS/sim_env/devel/include/navfn/SetCostmap.h"
 )
 
 # Per-language clean rules from dependency scanning.

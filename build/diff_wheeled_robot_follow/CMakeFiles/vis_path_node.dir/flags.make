@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"diff_wheeled_robot_follow\"
 
-CXX_INCLUDES = -I/home/fyin/sim_env/src/diff_wheeled_robot_follow/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3 -I/home/fyin/sim_env/src/diff_wheeled_robot_follow/src 
+CXX_INCLUDES = -I/home/fyin/D01_WS/sim_env/src/diff_wheeled_robot_follow/include -I/home/fyin/D01_WS/sim_env/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3 -I/home/fyin/D01_WS/sim_env/src/diff_wheeled_robot_follow/src 
 

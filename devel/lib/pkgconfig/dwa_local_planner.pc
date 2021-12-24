@@ -1,8 +1,8 @@
-prefix=/home/fyin/sim_env/devel
+prefix=/home/fyin/D01_WS/sim_env/devel
 
 Name: dwa_local_planner
 Description: Description of dwa_local_planner
-Version: 1.17.1
-Cflags: -I/home/fyin/sim_env/devel/include -I/home/fyin/sim_env/src/navigation/dwa_local_planner/include
+Version: 1.16.7
+Cflags: -I/home/fyin/D01_WS/sim_env/devel/include -I/home/fyin/D01_WS/sim_env/src/navigation/dwa_local_planner/include
 Libs: -L${prefix}/lib -ldwa_local_planner
 Requires: base_local_planner dynamic_reconfigure nav_msgs pluginlib sensor_msgs roscpp tf2 tf2_ros

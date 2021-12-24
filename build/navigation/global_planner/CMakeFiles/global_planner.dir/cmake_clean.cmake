@@ -6,8 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/global_planner.dir/src/gradient_path.cpp.o"
   "CMakeFiles/global_planner.dir/src/orientation_filter.cpp.o"
   "CMakeFiles/global_planner.dir/src/planner_core.cpp.o"
-  "/home/fyin/sim_env/devel/lib/libglobal_planner.pdb"
-  "/home/fyin/sim_env/devel/lib/libglobal_planner.so"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libglobal_planner.pdb"
+  "/home/fyin/D01_WS/sim_env/devel/lib/libglobal_planner.so"
 )
 
 # Per-language clean rules from dependency scanning.

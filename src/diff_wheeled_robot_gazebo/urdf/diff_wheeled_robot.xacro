@@ -263,7 +263,7 @@
       <broadcastTF>1</broadcastTF>
       <wheelTorque>100</wheelTorque>
       <wheelAcceleration>2.5</wheelAcceleration>
-      <commandTopic>/cmd_vel</commandTopic>
+      <commandTopic>/velocity_smoother_nodelet/raw_cmd_vel</commandTopic>
       <odometryFrame>odom</odometryFrame> 
       <odometryTopic>odom</odometryTopic> 
       <robotBaseFrame>base_footprint</robotBaseFrame>

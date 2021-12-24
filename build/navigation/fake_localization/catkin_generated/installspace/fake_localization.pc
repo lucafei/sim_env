@@ -1,8 +1,8 @@
-prefix=/home/fyin/sim_env/install
+prefix=/home/fyin/D01_WS/sim_env/install
 
 Name: fake_localization
 Description: Description of fake_localization
-Version: 1.17.1
+Version: 1.16.7
 Cflags: 
 Libs: -L${prefix}/lib 
 Requires: geometry_msgs nav_msgs roscpp rospy
