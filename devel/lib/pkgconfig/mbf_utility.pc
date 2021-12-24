@@ -1,8 +1,0 @@
-prefix=/home/fyin/D01_WS/sim_env/devel
-
-Name: mbf_utility
-Description: Description of mbf_utility
-Version: 0.3.4
-Cflags: -I/home/fyin/D01_WS/sim_env/src/TEB/move_base_flex/mbf_utility/include
-Libs: -L${prefix}/lib -lmbf_utility
-Requires: geometry_msgs roscpp tf tf2 tf2_ros tf2_geometry_msgs

@@ -1,8 +1,0 @@
-prefix=/home/fyin/D01_WS/sim_env/install
-
-Name: diff_wheeled_robot_bringup
-Description: Description of diff_wheeled_robot_bringup
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
