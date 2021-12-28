@@ -12,6 +12,10 @@
 
   <!-- 4. 导航 -->
   <include file="$(find diff_wheeled_robot_navigation)/launch/include/move_base.launch.xml"/>
+  <!--
+  <include file="$(find diff_wheeled_robot_navigation)/launch/include/continuous_waypoints.launch.xml"/>
+  -->
+  
 
   <!-- 5. rviz显示 -->
   <node name="rviz" pkg="rviz" type="rviz" required="true"

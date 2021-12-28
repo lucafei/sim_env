@@ -1,0 +1,29 @@
+<launch>
+  <group ns="controller_1">
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+      <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS"/>
+      <rosparam file="$(find diff_wheeled_robot_navigation)/param/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+      <rosparam file="$(find diff_wheeled_robot_navigation)/param/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+      <rosparam file="$(find diff_wheeled_robot_navigation)/param/local_costmap_params.yaml" command="load"/>
+      <rosparam file="$(find diff_wheeled_robot_navigation)/param/global_costmap_params.yaml" command="load"/>
+      <rosparam file="$(find diff_wheeled_robot_navigation)/param/move_base_params.yaml" command="load"/>
+      <rosparam file="$(find diff_wheeled_robot_navigation)/param/teb_local_planner_params.yaml" command="load"/>
+      <remap from="cmd_vel" to="/cmd_vel1" />
+      <remap from="odom" to="odom"/>
+    </node>
+  </group>
+
+  <group ns="controller_2">    
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS"/>
+        <rosparam file="$(find diff_wheeled_robot_navigation)/param/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+        <rosparam file="$(find diff_wheeled_robot_navigation)/param/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+        <rosparam file="$(find diff_wheeled_robot_navigation)/param/local_costmap_params.yaml" command="load"/>
+        <rosparam file="$(find diff_wheeled_robot_navigation)/param/global_costmap_params.yaml" command="load"/>
+        <rosparam file="$(find diff_wheeled_robot_navigation)/param/move_base_params.yaml" command="load"/>
+        <rosparam file="$(find diff_wheeled_robot_navigation)/param/teb_local_planner_params.yaml" command="load"/>
+        <remap from="cmd_vel" to="/cmd_vel2" />
+        <remap from="odom" to="odom"/>
+    </node>
+  </group>
+</launch>

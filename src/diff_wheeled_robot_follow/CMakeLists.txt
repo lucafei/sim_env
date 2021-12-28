@@ -145,6 +145,9 @@ include_directories(
  add_executable(waypoints_follow_node src/waypoints_follow.cpp)
  add_executable(waypoints_record_node src/waypoints_record.cpp)
  add_executable(follow_node src/follow_node.cc)
+ add_executable(controller_switcher_node src/switch_controller.cpp)
+ add_executable(controller1_node src/controller1.cpp)
+ add_executable(controller2_node src/controller2.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -169,6 +172,16 @@ target_link_libraries(waypoints_record_node
 ${catkin_LIBRARIES}
 )
 target_link_libraries(follow_node
+${catkin_LIBRARIES}
+)
+target_link_libraries(controller_switcher_node
+${catkin_LIBRARIES}
+
+)
+target_link_libraries(controller1_node
+${catkin_LIBRARIES}
+)
+target_link_libraries(controller2_node
 ${catkin_LIBRARIES}
 )
 #############

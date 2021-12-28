@@ -84,6 +84,7 @@ public:
         {
             ROS_INFO("Waiting for the move_base action server");
         }
+        actionlib::SimpleClientGoalState state = ac.getState();
         for (int i = 0; i < size; i++)
         {
             move_base_msgs::MoveBaseGoal goal;
@@ -131,6 +132,8 @@ public:
             goal.pose.orientation.w = waypoints[i][6];
             goal_pub.publish(goal);
             ROS_INFO_STREAM("Sending goal NO: " << i);
+            //get velocity of /cmd_vel of move_base
+
             listener.waitForTransform(odom_frame_id, base_frame_id, ros::Time(), ros::Duration(4.0));
             while (distance > distance_tolerance)
             {
